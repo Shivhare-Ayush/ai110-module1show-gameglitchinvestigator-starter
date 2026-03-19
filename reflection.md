@@ -34,13 +34,10 @@ I treated a bug as fixed only when both automated tests and live gameplay matche
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+I would explain Streamlit reruns as: every time you click a widget, Streamlit runs your script from top to bottom again. If you store values in regular local variables, they can reset on every click and make the app feel buggy. Session state is the way to keep important data like the secret number, attempts, score, and status across reruns. Once I understood this, it became much easier to reason about why the app behavior changed after each submit. I also learned to check exactly where state is initialized and updated, because one wrong assignment can break game flow.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+One habit I want to reuse is writing or updating a regression test right after I fix each bug, so I can prove the bug is gone and protect against future regressions. Next time, I would use even smaller AI prompts and keep each chat session focused on one function and one behavior, then review diffs before accepting anything. I would also reject quick "it imports so it works" conclusions and always do at least one real runtime check in the actual app. This project changed how I think about AI-generated code because I now treat AI as a collaborator, not an authority. AI can move work faster, but I am still responsible for correctness, testing, and final decisions.

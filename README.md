@@ -25,13 +25,17 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+   - This project is a Streamlit number guessing game used to practice debugging AI-generated code and validating fixes with tests.
+- [x] Detail which bugs you found.
+   - I found reversed hint logic (too high showed "Go HIGHER"), a type bug where the secret was cast to a string on even attempts, and a difficulty-range issue where Hard mode used a smaller range than Normal.
+- [x] Explain what fixes you applied.
+   - I refactored game logic from `app.py` into `logic_utils.py`, fixed the high/low direction logic in `check_guess`, removed the string-cast bug in the submit flow, and added regression tests in `tests/test_game_logic.py`.
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+- [ ] [Insert a screenshot of pytest passing results here]
 
 ## 🚀 Stretch Features
 
