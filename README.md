@@ -34,8 +34,15 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
-- [ ] [Insert a screenshot of pytest passing results here]
+
+
+## ✅ Challenge 1: Advanced Edge-Case Testing
+
+- [x] Identified three edge-case inputs: negative numbers, decimals, and extremely large values.
+- [x] Added pytest coverage for these cases in `tests/test_game_logic.py`.
+- [x] Verified tests pass locally.
+- [x] Added screenshot of pytest command and passing results:
+![Challenge 1 pytest results](pytest-edge-cases.png)
 
 ## 🚀 Stretch Features
 

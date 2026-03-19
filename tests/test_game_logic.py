@@ -49,3 +49,24 @@ def test_parse_guess_returns_int():
     assert ok is True
     assert isinstance(value, int)
     assert value == 42
+
+
+# Challenge 1 edge cases
+def test_parse_guess_accepts_negative_number():
+    ok, value, err = parse_guess("-7")
+    assert ok is True
+    assert value == -7
+    assert err is None
+
+
+def test_parse_guess_handles_decimal_input_gracefully():
+    ok, value, err = parse_guess("42.9")
+    assert ok is True
+    assert value == 42
+    assert err is None
+
+
+def test_check_guess_handles_extremely_large_value():
+    large_guess = 10**30
+    outcome, message = check_guess(large_guess, 50)
+    assert outcome == "Too High"
